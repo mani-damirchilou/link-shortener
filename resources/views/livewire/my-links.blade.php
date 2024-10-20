@@ -4,7 +4,7 @@
             <button class="btn btn-ghost bg-base-300">
                 @lang('components.my-links.title')
                 <span class="badge">
-                    {{$count}}
+                    {{$links->count()}}
                 </span>
             </button>
         </x-slot:toggler>

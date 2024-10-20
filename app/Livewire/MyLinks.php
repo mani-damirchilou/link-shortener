@@ -17,7 +17,6 @@ class MyLinks extends Component
     public function render()
     {
         return view('livewire.my-links')->with([
-            'count' => auth()->user()->links()->count(),
             'links' => auth()->user()->links
         ]);
     }
