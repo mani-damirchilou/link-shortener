@@ -9,7 +9,8 @@ class MyLinks extends Component
     public function getListeners()
     {
         return [
-            'link-created' => '$refresh'
+            'link-created' => '$refresh',
+            'link-deleted' => '$refresh',
         ];
     }
 

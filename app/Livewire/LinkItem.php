@@ -18,4 +18,11 @@ class LinkItem extends Component
     {
         $this->link = $link;
     }
+
+    public function delete()
+    {
+        $this->authorize('delete', $this->link);
+        $this->link->delete();
+        $this->dispatch('link-deleted')->to(MyLinks::class);
+    }
 }
