@@ -32,9 +32,17 @@
                             </x-submit>
                         </form>
                     @else
-                    <x-clipboard :value="$link"/>
+                    <div class="flex gap-5 items-center">
+                        <div class="bg-base-100 rounded-lg px-5 py-4">
+                            {{$link}}
+                        </div>
+                        <x-clipboard :value="$link"/>
+                    </div>
                 @endif
             @endauth
         </div>
     </div>
+    @auth
+        <livewire:my-links/>
+    @endauth
 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Pages;
 
+use App\Livewire\MyLinks;
 use App\Models\Link;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
@@ -39,5 +40,7 @@ class Home extends Component
         $this->reset('url');
 
         $this->link = route('link', $link->slug);
+
+        $this->dispatch('link-created')->to(MyLinks::class);
     }
 }
