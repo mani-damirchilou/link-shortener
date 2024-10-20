@@ -11,7 +11,7 @@ class Link extends Model
     use HasFactory;
 
     protected $fillable = [
-        'link','slug'
+        'url','slug'
     ];
 
     public function user()
