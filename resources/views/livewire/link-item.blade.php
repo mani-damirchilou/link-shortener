@@ -1,9 +1,9 @@
 <div>
-    <div class="bg-base-300 p-5 my-2 rounded-lg flex justify-between items-center gap-5">
+    <div class="bg-base-300 p-5 my-2 rounded-lg flex justify-between items-center gap-5 max-sm:flex-col">
         <span class="bg-base-100 p-2 rounded-lg">
             {{$link->url}}
         </span>
-        <div class="flex gap-2">
+        <div class="flex gap-2 items-center">
             <x-clipboard :value="route('link',$link->slug)"/>
             <button wire:click="delete" class="btn btn-ghost bg-base-200 text-error">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
