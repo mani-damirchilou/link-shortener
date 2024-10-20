@@ -30,6 +30,8 @@ class Home extends Component
 
     public function create()
     {
+        abort_if(!auth()->check(),401);
+
         $this->validate();
 
         $link = auth()->user()->links()->create([
