@@ -5,5 +5,10 @@ return [
     ],
     'register' => [
         'submit' => 'ساخت حساب کاربری'
+    ],
+    'links' => [
+        'create' => [
+            'placeholder' => 'لینک خود را وارد کنید'
+        ]
     ]
 ];
