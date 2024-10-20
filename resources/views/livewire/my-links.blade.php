@@ -8,8 +8,10 @@
                 </span>
             </button>
         </x-slot:toggler>
-        @foreach($links as $link)
+        @forelse($links as $link)
             <livewire:link-item wire:key="{{$link->id}}" :$link/>
-        @endforeach
+        @empty
+            <p class="text-center">@lang('components.my-links.empty')</p>
+        @endforelse
     </x-modal>
 </div>
