@@ -62,4 +62,6 @@ test('user can login with correct credentials', function () {
         ->call('submit')
         ->assertHasNoErrors()
         ->assertRedirect();
+
+    expect(auth()->check())->toBeTrue();
 });
