@@ -20,5 +20,10 @@
                 @lang('forms.login.submit')
             </x-loading>
         </x-submit>
+        <span class="mt-3 text-center text-sm text-blue-500 hover:text-blue-700 transition-colors">
+            <x-link :href="route('register')">
+                @lang('pages.login.dont-have-account')
+            </x-link>
+        </span>
     </form>
 </div>
