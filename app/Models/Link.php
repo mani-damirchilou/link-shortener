@@ -13,7 +13,7 @@ class Link extends Model
     use HasFactory, Prunable;
 
     protected $fillable = [
-        'url','slug'
+        'url','slug','last_used'
     ];
 
     public function user()
@@ -23,6 +23,6 @@ class Link extends Model
 
     public function prunable(): Builder
     {
-        return static::where('updated_at','<=',now()->subMonth());
+        return static::where('last_used','<=',now()->subMonth());
     }
 }
