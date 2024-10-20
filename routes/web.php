@@ -15,5 +15,8 @@ Route::get('/',Home::class)->name('index');
 
 
 Route::get('/link/{link:slug}',function (Link $link){
+    $link->updateQuietly([
+        'updated_at' => now()
+    ]);
     return redirect()->away($link->url);
 })->name('link');
